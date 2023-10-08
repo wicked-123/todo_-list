@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Homemade+Apple&family=Kaushan+Script&display=swap" rel="stylesheet">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Express Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="heading">
+    <div class="">
+        <h1>Todo List </h1>
+    </div>
+
+    <div class="" id="heading">
+        <me>
+            <%= kindOfDay %>
+        </me>
+    </div>
+</div>
+
+    <div class="box">
+        <% for ( let i=0; i < newListItems.length; i++ ) { %>
+            <div class="item" id="it">
+                <input type="checkbox" id="myCheckbox">
+                    <p><%= newListItems[i] %></p>
+
+            </div>
+            <% } %>
+
+
+    </div>
+    <form class="form" action="/" method="post">
+        <input type="text"  id="my" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="button">add</button>
+    </form>
+
+
+    <footer>
+        Dasari Vignan
+    </footer>
+
+</body>
+
+
+
+</html>
